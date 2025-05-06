@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🌈 Memory Match</h1>
+            <div class="difficulty">
+                <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <div class="info-box">
+                <span class="info-label">Moves</span>
+                <span id="moves" class="info-value">0</span>
+            </div>
+            <div class="info-box">
+                <span class="info-label">Time</span>
+                <span id="timer" class="info-value">0s</span>
+            </div>
+            <div class="info-box">
+                <span class="info-label">Matches</span>
+                <span id="matches" class="info-value">0/8</span>
+            </div>
+            <button id="restart" class="glow-button">🔄 Restart</button>
+        </div>
+        
+        <div class="game-board" id="game-board"></div>
+        
+        <div class="celebration" id="celebration"></div>
+    </div>
+    
+    <audio id="flipSound" src="https://assets.mixkit.co/sfx/preview/mixkit-card-flip-1929.mp3"></audio>
+    <audio id="matchSound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-interface-beep-221.mp3"></audio>
+    <audio id="winSound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
